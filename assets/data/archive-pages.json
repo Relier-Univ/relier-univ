@@ -1,0 +1,146 @@
+{
+  "generated_from": "",
+  "conference_pages": 25,
+  "document_records": 115,
+  "historical_main_pages": [
+    [
+      "Actualités",
+      "",
+      "archives/actualites.html"
+    ],
+    [
+      "Nos conférences",
+      "",
+      "ressources/conferences/index.html"
+    ],
+    [
+      "Notre offre formation",
+      "",
+      "formations.html"
+    ],
+    [
+      "Démarche qualité",
+      "",
+      "formations/demarche-qualite.html"
+    ],
+    [
+      "Risques",
+      "",
+      "formations/risques.html"
+    ],
+    [
+      "Auto-évaluation",
+      "",
+      "formations/auto-evaluation.html"
+    ],
+    [
+      "Les autres réseaux",
+      "",
+      "archives/autres-reseaux.html"
+    ],
+    [
+      "Inscription",
+      "",
+      "rejoindre.html"
+    ]
+  ],
+  "events_from_actualites": [
+    {
+      "slug": "2025-06-06-sid",
+      "date": "6 juin 2025",
+      "kind": "Mensuelle",
+      "title": "Et vous, comment utilisez-vous votre SID ?",
+      "summary": "Échange entre pairs autour des usages des systèmes d’information décisionnels dans les établissements."
+    },
+    {
+      "slug": "2025-05-12-efqm",
+      "date": "12 mai 2025",
+      "kind": "Mensuelle",
+      "title": "Le modèle EFQM",
+      "summary": "Mensuelle RELIER consacrée au modèle EFQM et à ses usages possibles dans l’ESR."
+    },
+    {
+      "slug": "2025-02-05-dispositifs-innovants",
+      "date": "5 février 2025",
+      "kind": "Mensuelle",
+      "title": "Les dispositifs innovants au service du pilotage stratégique et opérationnel dans un écosystème en transition",
+      "summary": "Temps d’échange court consacré aux pratiques innovantes de pilotage."
+    },
+    {
+      "slug": "2024-12-03-cti-qualite",
+      "date": "3 décembre 2024",
+      "kind": "Mensuelle",
+      "title": "Quel accompagnement pour le volet démarche qualité du dossier d’accréditation CTI ?",
+      "summary": "Échange sur l’accompagnement des établissements et formations pour le volet qualité des dossiers CTI."
+    },
+    {
+      "slug": "2024-10-22-cicfb-qualite",
+      "date": "22 octobre 2024",
+      "kind": "Mensuelle",
+      "title": "Contrôle Interne Comptable Financier Budgétaire (CICFB) et démarche qualité : différences et complémentarités",
+      "summary": "Regards croisés sur les articulations entre contrôle interne et démarche qualité."
+    },
+    {
+      "slug": "2024-09-17-parcours-usagers",
+      "date": "17 septembre 2024",
+      "kind": "Mensuelle",
+      "title": "Parcours usagers",
+      "summary": "Première Mensuelle RELIER 2024–2025 consacrée au parcours usagers."
+    },
+    {
+      "slug": "2024-06-04-transformation-fst-lille",
+      "date": "4 juin 2024",
+      "kind": "RETEX",
+      "title": "La transformation de la Faculté Sciences et Technologies",
+      "summary": "Retour d’expérience de l’Université de Lille sur une transformation de composante."
+    },
+    {
+      "slug": "2024-05-14-aap-qualite",
+      "date": "14 mai 2024",
+      "kind": "RETEX",
+      "title": "Appels à projets dans l’ESR vus sous l’angle de la démarche qualité",
+      "summary": "Retour d’expérience consacré à l’articulation entre logique d’appels à projets et démarche qualité."
+    },
+    {
+      "slug": "2024-04-04-sid",
+      "date": "4 avril 2024",
+      "kind": "RETEX",
+      "title": "Système d’Information Décisionnel",
+      "summary": "Retour d’expérience consacré aux systèmes d’information décisionnels."
+    },
+    {
+      "slug": "2024-03-05-autoevaluation-hceres",
+      "date": "5 mars 2024",
+      "kind": "RETEX",
+      "title": "Autoévaluation / Évaluation HCERES — RAE, volet établissement",
+      "summary": "Retour d’expérience sur l’autoévaluation et la préparation du rapport d’autoévaluation établissement."
+    },
+    {
+      "slug": "2023-12-21-dematerialisation",
+      "date": "21 décembre 2023",
+      "kind": "RETEX",
+      "title": "Dématérialisation : les clés pour réussir dans l’enseignement supérieur et la recherche",
+      "summary": "Retour d’expérience sur les facteurs de réussite d’un projet de dématérialisation dans l’ESR."
+    },
+    {
+      "slug": "2023-11-07-innovation-publique",
+      "date": "7 novembre 2023",
+      "kind": "RETEX",
+      "title": "Innovation publique — mois de l’innovation publique",
+      "summary": "RETEX organisé dans le cadre du mois de l’innovation publique, avec mise à disposition d’un enregistrement sur la chaîne YouTube du réseau."
+    },
+    {
+      "slug": "2023-10-03-referentiels-qualite",
+      "date": "3 octobre 2023",
+      "kind": "RETEX",
+      "title": "Référentiels qualité applicables aux établissements",
+      "summary": "Échange sur les référentiels qualité, incluant une initiative de croisement de référentiels qualité et DD&RS."
+    }
+  ],
+  "formations": [
+    "demarche-qualite",
+    "risques",
+    "auto-evaluation"
+  ],
+  "notes": "Les pages créées à partir d’annonces historiques ne contiennent aucune information inventée lorsque la source ne publiait pas de programme détaillé."
+}

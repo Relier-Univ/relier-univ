@@ -1,0 +1,468 @@
+[
+  {
+    "slug": "2025-07-03-aap-pilotage",
+    "date": "3 juillet 2025",
+    "year": 2025,
+    "num": "24",
+    "code": "PG",
+    "cat": "strategie",
+    "theme": "Stratégie & gouvernance",
+    "format": "Webconférence",
+    "title": "AAP et pilotage : comment la logique des appels à projets impacte le pilotage d’un établissement",
+    "summary": "Les appels à projets irriguent désormais l’ensemble des missions et fonctions des établissements. Cette conférence parcourt leur cycle de vie — détection, sélection, montage, suivi et évaluation — et interroge le rôle des fonctions pilotage, qualité et amélioration continue.",
+    "program": [
+      "Alliances d’universités européennes comme leviers de transformation institutionnelle — Université de Rennes / EDUC",
+      "Détection et sélection des appels France 2030 : de la veille à la décision éclairée — Université de Strasbourg",
+      "Structures d’appui et ingénierie de projets : accompagner les chercheurs dans le montage des réponses — Lyon Ingénierie Projets / Université Claude Bernard Lyon 1"
+    ]
+  },
+  {
+    "slug": "2025-03-25-schemas-directeurs",
+    "date": "25 mars 2025",
+    "year": 2025,
+    "num": "23",
+    "code": "PG",
+    "cat": "strategie",
+    "theme": "Stratégie & gouvernance",
+    "format": "Webconférence",
+    "title": "Piloter les schémas directeurs : de la stratégie à l’opérationnel",
+    "summary": "Une webconférence consacrée à la manière dont les schémas directeurs peuvent devenir de véritables outils d’appui à la stratégie de l’établissement et d’articulation entre orientations politiques et mise en œuvre opérationnelle.",
+    "program": [
+      "Schémas directeurs et stratégie d’établissement",
+      "Articulation stratégie / programmation / mise en œuvre",
+      "Retours d’expérience et pratiques de pilotage"
+    ]
+  },
+  {
+    "slug": "2024-06-18-innovation-pilotage",
+    "date": "18 juin 2024",
+    "year": 2024,
+    "num": "22",
+    "code": "PG",
+    "cat": "transformation",
+    "theme": "Transformation des organisations",
+    "format": "Conférence",
+    "title": "L’innovation au service du pilotage des établissements de l’ESR",
+    "summary": "IA, self-BI, soft skills, coaching, design de services et marque employeur : la conférence explore les outils, organisations et nouveaux métiers qui renouvellent les pratiques de pilotage dans l’ESR.",
+    "program": [
+      "Nouvelles frontières du pilotage : innovation, agilité et collaboration",
+      "Piloter la transformation organisationnelle : enjeux, défis et bonnes pratiques",
+      "Nouveaux métiers, nouvelles compétences : se transformer pour transformer ?",
+      "Data, big data, Self BI, SID : enjeux de la donnée publique dans l’ESR",
+      "Intelligence artificielle et pilotage : leviers, enjeux et réalités"
+    ]
+  },
+  {
+    "slug": "2024-02-01-comp",
+    "date": "1er février 2024",
+    "year": 2024,
+    "num": "21",
+    "code": "QE / PG",
+    "cat": "strategie",
+    "theme": "Stratégie & gouvernance",
+    "format": "Webconférence",
+    "title": "Les Contrats d’Objectifs, de Moyens et de Performance (COMP)",
+    "summary": "Trois retours d’expérience pour comprendre comment les COMP peuvent devenir des instruments de dialogue stratégique et de pilotage interne, dans des contextes institutionnels différents.",
+    "program": [
+      "Nantes Université : retour d’expérience d’un établissement public expérimental",
+      "Université de Rennes : regards croisés établissement / rectorat dans un contexte de mise en place d’un EPE",
+      "Université Paris-Est Créteil : le COMP comme outil de pilotage interne"
+    ]
+  },
+  {
+    "slug": "2023-06-27-transformations-esr",
+    "date": "27 juin 2023",
+    "year": 2023,
+    "num": "20",
+    "code": "PG",
+    "cat": "transformation",
+    "theme": "Transformation des organisations",
+    "format": "Conférence",
+    "title": "Transformations dans l’ESR : parlons-en !",
+    "summary": "Pour les dix ans du réseau, RELIER met en perspective les mutations de l’ESR : transformations institutionnelles, contractualisation, métiers, données, évaluation et rôle des fonctions d’aide au pilotage.",
+    "program": [
+      "Grandes transformations d’établissements (fusions / EPE) et rôle des fonctions qualité et aide au pilotage",
+      "Évolutions des stratégies de contractualisation entre le ministère et les établissements",
+      "Transformation des métiers au sein des établissements de l’ESR",
+      "Place de la donnée et des indicateurs dans les transformations",
+      "Transformation du HCERES et prospective du réseau RELIER"
+    ]
+  },
+  {
+    "slug": "2023-03-09-ddrs",
+    "date": "9 mars 2023",
+    "year": 2023,
+    "num": "19",
+    "code": "DD",
+    "cat": "ddrs",
+    "theme": "Transitions & responsabilités",
+    "format": "Conférence",
+    "title": "Développement durable et responsabilité sociétale : nouvelles approches au service du pilotage des universités",
+    "summary": "Une journée consacrée à l’intégration des enjeux de transition écologique, sociale et sociétale dans la stratégie et le pilotage des établissements d’enseignement supérieur et de recherche.",
+    "program": [
+      "Mise en perspective des responsabilités des établissements d’ESR face aux transitions",
+      "Articulation entre stratégie, démarches DD&RS et pilotage",
+      "Retours d’expérience d’établissements et outils de mise en œuvre"
+    ]
+  },
+  {
+    "slug": "2022-06-09-labs-innovation",
+    "date": "9 juin 2022",
+    "year": 2022,
+    "num": "18",
+    "code": "PG",
+    "cat": "transformation",
+    "theme": "Transformation des organisations",
+    "format": "Conférence",
+    "title": "Agitateur d’idées au service des transformations de l’ESR : le rôle des labs d’innovation",
+    "summary": "Les labs d’innovation publique comme structures d’appui au pilotage, à la transformation des organisations et à l’amélioration du rapport à l’usager.",
+    "program": [
+      "La pierre angulaire des labs : des collectifs créateurs d’intelligence collective",
+      "EASI Lab et Quick wins : deux manières de transformer l’administration universitaire",
+      "Récit de création d’un Lab’, entre mythe et réalité",
+      "Le Lab comme outil au service de l’innovation",
+      "Laboratoire ERPI : recherche sur les processus innovatifs"
+    ]
+  },
+  {
+    "slug": "2021-05-20-international-qualite",
+    "date": "20 mai 2021",
+    "year": 2021,
+    "num": "17",
+    "code": "IN",
+    "cat": "international",
+    "theme": "International",
+    "format": "Webconférence",
+    "title": "Ouverture internationale et ESR : impact de la démarche qualité",
+    "summary": "La qualité et le pilotage comme appuis aux coopérations internationales : cadres européens, stratégie d’établissement, évaluation internationale et retours d’expérience en Europe et en Asie.",
+    "program": [
+      "ESG, référentiels européens et évaluation internationale",
+      "Le HCERES comme acteur de l’évaluation et du développement international",
+      "Stratégie internationale et leviers de la qualité — Université de Rennes 1",
+      "Démarche qualité dans une université allemande",
+      "Développement de l’expertise francophone à l’international — AUF",
+      "Mise en qualité des universités de l’ASEAN : retour d’expérience"
+    ]
+  },
+  {
+    "slug": "2020-11-27-ftlv",
+    "date": "27 novembre 2020",
+    "year": 2020,
+    "num": "16",
+    "code": "FO",
+    "cat": "formation",
+    "theme": "Formation",
+    "format": "E-conférence",
+    "title": "Pilotage de la FTLV dans les établissements de l’ESR au sein d’un écosystème en mouvement",
+    "summary": "La réforme de la formation professionnelle transforme rôles, responsabilités, relation à l’usager et modalités de formation. La conférence en mesure les impacts sur le pilotage et les démarches qualité.",
+    "program": [
+      "Écosystème national et international en mouvement et stratégie d’établissement",
+      "Paysage des certifications des organismes de formation continue",
+      "NCU FlexiTLV : formation orientée compétences",
+      "Panorama des pratiques d’enquête et réflexion globale en FTLV"
+    ]
+  },
+  {
+    "slug": "2020-07-09-covid-management-distance",
+    "date": "9 juillet 2020",
+    "year": 2020,
+    "num": "Webconf",
+    "code": "PG",
+    "cat": "transformation",
+    "theme": "Transformation des organisations",
+    "format": "Webconférence",
+    "title": "COVID-19 et management à distance",
+    "summary": "Une webconférence consacrée aux conséquences organisationnelles de la crise sanitaire, au management à distance et aux adaptations des modes de pilotage des établissements.",
+    "program": [
+      "Management à distance et continuité d’activité",
+      "Organisation du travail en période de crise",
+      "Retours d’expérience de l’ESR"
+    ]
+  },
+  {
+    "slug": "2019-07-04-transformations-universite",
+    "date": "4 juillet 2019",
+    "year": 2019,
+    "num": "15",
+    "code": "PG",
+    "cat": "transformation",
+    "theme": "Transformation des organisations",
+    "format": "Conférence",
+    "title": "Transformations de l’université : parlons-en !",
+    "summary": "Fusions, rapprochements, soutenabilité, transformation numérique et internationalisation : quels appuis et soutiens peuvent apporter les fonctions d’aide au pilotage et les activités transversales ?",
+    "program": [
+      "Dialogues stratégiques d’activités au service des transformations",
+      "Organisation au service des transformations pédagogiques",
+      "Accompagnement des projets transformants",
+      "De la production à l’appropriation des données",
+      "Adaptation des systèmes d’information aux transformations",
+      "SID : retours d’expérimentation d’établissements partenaires"
+    ]
+  },
+  {
+    "slug": "2018-06-19-qualite-formations",
+    "date": "19 juin 2018",
+    "year": 2018,
+    "num": "14",
+    "code": "FO",
+    "cat": "formation",
+    "theme": "Formation",
+    "format": "Conférence",
+    "title": "Qualité des formations : quelles contributions au pilotage de l’offre ?",
+    "summary": "Une journée croisant vision nationale et initiatives locales pour interroger la contribution des démarches qualité à la transformation pédagogique, à l’évaluation et au pilotage de l’offre de formation.",
+    "program": [
+      "La qualité, enjeu pour la transformation pédagogique dans l’enseignement supérieur français",
+      "Certification de services et formation continue",
+      "Projet LICenSE : licence interuniversitaire coopérative expérimentale numérique",
+      "Évaluation de la qualité des formations",
+      "Démarche qualité des formations à l’EHESP"
+    ]
+  },
+  {
+    "slug": "2018-01-19-esg-qualite",
+    "date": "19 janvier 2018",
+    "year": 2018,
+    "num": "13",
+    "code": "QE",
+    "cat": "evaluation",
+    "theme": "Qualité & évaluation",
+    "format": "Conférence",
+    "title": "Grandes orientations européennes de la qualité : un autre éclairage pour les établissements",
+    "summary": "À l’approche de la conférence ministérielle du processus de Bologne à Paris, RELIER propose une lecture des ESG et de leur traduction dans les pratiques d’évaluation et d’assurance qualité des établissements.",
+    "program": [
+      "ESG : compréhension, enjeux et défis pour l’enseignement supérieur — AEQES / ENQA",
+      "Prise en compte des ESG par la CTI",
+      "Traduction des ESG dans les référentiels du HCERES",
+      "Mise en œuvre des références européennes dans les établissements"
+    ]
+  },
+  {
+    "slug": "2017-06-16-donnee-connaissance",
+    "date": "16 juin 2017",
+    "year": 2017,
+    "num": "12",
+    "code": "PD",
+    "cat": "donnees",
+    "theme": "Pilotage & données",
+    "format": "Conférence",
+    "title": "De la donnée à la connaissance : améliorer la performance et la qualité des services",
+    "summary": "Mesure, performance, dématérialisation, décisionnel et tableaux de bord : une journée sur les conditions de transformation des données en connaissances utiles au pilotage.",
+    "program": [
+      "Les données au service de la qualité : mesure et incertitude",
+      "Enjeux et finalités : redonner du sens",
+      "Amélioration des services par la dématérialisation des processus",
+      "Cible décisionnelle communautaire",
+      "Tableaux de bord du pilotage des projets SI de l’État",
+      "Articulation démarche qualité et systèmes d’information"
+    ]
+  },
+  {
+    "slug": "2016-12-01-manager-autrement",
+    "date": "1er décembre 2016",
+    "year": 2016,
+    "num": "11",
+    "code": "PG",
+    "cat": "transformation",
+    "theme": "Transformation des organisations",
+    "format": "Conférence",
+    "title": "Oser manager autrement face aux changements et à la complexité dans les établissements de l’ESR",
+    "summary": "Compétences managériales, transformation numérique, art, changement, entreprise libérée et approches collaboratives : une journée pour revisiter les pratiques de management dans l’ESR.",
+    "program": [
+      "Les compétences managériales dans la civilisation numérique",
+      "Transformation numérique, innovation et nouvelles organisations",
+      "Comment l’art peut servir le management dans l’enseignement supérieur",
+      "La pratique du changement : comment réussir le changement",
+      "Nouveau management et entreprise libérée",
+      "Retour d’expérience sur le collaboratif"
+    ]
+  },
+  {
+    "slug": "2016-07-05-strategie-recherche",
+    "date": "5 juillet 2016",
+    "year": 2016,
+    "num": "10",
+    "code": "RE",
+    "cat": "recherche",
+    "theme": "Recherche",
+    "format": "Conférence",
+    "title": "Un levier de la stratégie recherche : les apports de la qualité pour son pilotage",
+    "summary": "Comment articuler stratégie scientifique, auto-évaluation, qualité, management de la recherche et politiques RH européennes au service du pilotage de la recherche ?",
+    "program": [
+      "Enjeux liés à la stratégie en recherche",
+      "Lien entre stratégie scientifique et auto-évaluation des unités",
+      "Politique qualité dans une très grande unité de recherche",
+      "Management éthique et efficace en recherche",
+      "Certification ISO 9001 d’un système de management en appui aux chercheurs",
+      "HRS4R : stratégie européenne de ressources humaines pour les chercheurs"
+    ]
+  },
+  {
+    "slug": "2015-11-27-dispositifs-qualite-formations",
+    "date": "27 novembre 2015",
+    "year": 2015,
+    "num": "09",
+    "code": "FO",
+    "cat": "formation",
+    "theme": "Formation",
+    "format": "Conférence",
+    "title": "Quels dispositifs au service de la qualité des formations ?",
+    "summary": "Évaluation, accréditation, certifications et amélioration du service rendu à l’étudiant : plusieurs dispositifs concrets pour renforcer la qualité et le pilotage des formations.",
+    "program": [
+      "Quand la démarche qualité porte une attention particulière à la formation",
+      "Comment l’évaluation contribue à l’amélioration des formations",
+      "Auto-évaluation et accréditation des formations",
+      "Valeur ajoutée des accréditations AACSB, AMBA et EQUIS",
+      "Améliorer le service rendu à l’étudiant",
+      "Simulation des charges d’enseignement au service du pilotage"
+    ]
+  },
+  {
+    "slug": "2015-03-27-alignement-strategique",
+    "date": "27 mars 2015",
+    "year": 2015,
+    "num": "08",
+    "code": "PG",
+    "cat": "strategie",
+    "theme": "Stratégie & gouvernance",
+    "format": "Conférence",
+    "title": "Alignement stratégique : de l’impulsion politique à la mise en œuvre opérationnelle",
+    "summary": "Une réflexion sur l’alignement entre stratégie, gouvernance et fonctionnement opérationnel des établissements dans un contexte d’autonomie accrue, de concurrence et de transformation.",
+    "program": [
+      "Comment la qualité peut-elle servir la stratégie de l’institution ?",
+      "De l’élaboration d’une stratégie à sa mise en œuvre : retour de l’Université de Lorraine",
+      "L’université comme organisation hybride : de l’art de la guerre à l’alignement stratégique",
+      "Enquête sur le pilotage des établissements d’ESR",
+      "Réformes universitaires au Japon : autonomie, stratégie et gouvernance"
+    ]
+  },
+  {
+    "slug": "2014-12-05-management-risques",
+    "date": "5 décembre 2014",
+    "year": 2014,
+    "num": "07",
+    "code": "RV",
+    "cat": "risques",
+    "theme": "Risques & vulnérabilités",
+    "format": "Conférence",
+    "title": "Management et maîtrise des risques : quels enjeux et quels outils pour les universités ?",
+    "summary": "La maîtrise des risques comme levier d’organisation, d’aide à la décision et de sécurisation des activités, à partir de retours d’expérience juridiques, financiers, organisationnels et d’audit interne.",
+    "program": [
+      "La maîtrise des risques, un levier de l’organisation",
+      "Maîtriser les risques juridiques par une approche qualité",
+      "Maîtrise des heures complémentaires : retour d’expérience avec l’outil SAGHE",
+      "Contribution de l’audit interne à la maîtrise des risques"
+    ]
+  },
+  {
+    "slug": "2014-07-11-aeres-hceres",
+    "date": "11 juillet 2014",
+    "year": 2014,
+    "num": "06",
+    "code": "QE",
+    "cat": "evaluation",
+    "theme": "Qualité & évaluation",
+    "format": "Conférence",
+    "title": "De l’AERES à l’HCERES : nouvelles pratiques d’auto-évaluation, dispositif national et accréditation",
+    "summary": "Évolution des dispositifs nationaux, auto-évaluation des formations et de la gouvernance, accréditation et méthodes : une journée riche en outils et retours d’expérience.",
+    "program": [
+      "AERES : changements dans l’évaluation des formations",
+      "Cahier des charges et attendus du CNESER",
+      "Auto-évaluation croisée des formations : Lyon 1 et Toulouse 3",
+      "Auto-évaluation de la gouvernance : UPEC",
+      "Retour d’expérience de l’Université libre de Bruxelles",
+      "Ateliers méthodologiques sur l’accréditation et l’auto-évaluation"
+    ]
+  },
+  {
+    "slug": "2014-04-15-cartographie-economique",
+    "date": "15 avril 2014",
+    "year": 2014,
+    "num": "05",
+    "code": "PG",
+    "cat": "strategie",
+    "theme": "Stratégie & gouvernance",
+    "format": "Conférence",
+    "title": "Cartographie économique et analyse stratégique des activités des universités",
+    "summary": "Au-delà de l’approche financière, la cartographie des activités permet d’améliorer la visibilité économique, la qualité du fonctionnement et l’analyse stratégique des établissements.",
+    "program": [
+      "Contexte et évolution des dispositifs nationaux : SYMPA, accréditation, cartographie économique",
+      "Retours d’expérience d’analyse économique — Lyon 1 et Bordeaux",
+      "Atelier : analyse stratégique des activités",
+      "Atelier : mise en œuvre des outils de cartographie économique"
+    ]
+  },
+  {
+    "slug": "2013-11-06-conduite-changement",
+    "date": "6 novembre 2013",
+    "year": 2013,
+    "num": "04",
+    "code": "PG",
+    "cat": "transformation",
+    "theme": "Transformation des organisations",
+    "format": "Conférence",
+    "title": "Conduite du changement, maîtrise de l’information : une autre approche du pilotage",
+    "summary": "Dans un contexte de mutations institutionnelles, comment maîtriser l’information, accompagner les rapprochements et fusions et faire adhérer les personnels aux transformations ?",
+    "program": [
+      "Qualité et changement dans l’Université de Bucarest",
+      "Retour d’expérience de la fusion de la Nouvelle Université de Bordeaux",
+      "Gestion de l’information et accompagnement du changement",
+      "Pilotage des transitions organisationnelles"
+    ]
+  },
+  {
+    "slug": "2013-06-05-auto-evaluation",
+    "date": "5 juin 2013",
+    "year": 2013,
+    "num": "03",
+    "code": "QE",
+    "cat": "evaluation",
+    "theme": "Qualité & évaluation",
+    "format": "Conférence",
+    "title": "Auto-évaluation : un atout pour la stratégie et la gouvernance",
+    "summary": "Culture de l’auto-évaluation, dispositifs institutionnels et dialogue de gestion : des retours français et européens pour faire de l’évaluation un véritable outil de gouvernance.",
+    "program": [
+      "Promouvoir une culture de l’auto-évaluation : résultats d’une étude de l’EUA",
+      "Quels dispositifs pour l’auto-évaluation d’un établissement ?",
+      "Dispositifs d’auto-évaluation à l’Université de Liège",
+      "Impact de l’auto-évaluation à l’Université de Savoie",
+      "Auto-évaluation dans le dialogue de gestion : quels leviers ?"
+    ]
+  },
+  {
+    "slug": "2013-03-04-gouvernance-qualite",
+    "date": "4 mars 2013",
+    "year": 2013,
+    "num": "02",
+    "code": "QE",
+    "cat": "qualite",
+    "theme": "Qualité & amélioration continue",
+    "format": "Conférence",
+    "title": "Gouvernance et qualité",
+    "summary": "Une des premières journées du réseau sur le lien entre gouvernance, indicateurs, cartographie des processus et structuration des démarches qualité dans l’ESR.",
+    "program": [
+      "Présentation du réseau RELIER",
+      "Les réseaux qualité dans l’enseignement supérieur et la recherche",
+      "Balanced scorecard : associer des indicateurs clés aux objectifs d’une institution",
+      "Cartographie des processus : retour sur un cas pratique",
+      "Approche processus et outils associés"
+    ]
+  },
+  {
+    "slug": "2012-12-05-referents-qualite",
+    "date": "5 décembre 2012",
+    "year": 2012,
+    "num": "01",
+    "code": "QE",
+    "cat": "qualite",
+    "theme": "Qualité & amélioration continue",
+    "format": "Journée",
+    "title": "Journée des référents qualité",
+    "summary": "La journée fondatrice du réseau : pilotage et qualité, culture d’amélioration continue, structures et compétences qualité et utilisation des démarches qualité au service de la gouvernance.",
+    "program": [
+      "Pilotage et qualité à l’Université de Lorraine",
+      "Atelier : culture qualité et amélioration continue",
+      "Atelier : démarches qualité — structures, fonctions et compétences",
+      "Atelier : la qualité, des outils au service de la gouvernance"
+    ]
+  }
+]

@@ -1,0 +1,15 @@
+RELIER - CONTROLE V5 AUTONOME
+
+Documents au manifeste : 115
+Documents locaux présents : 115
+PDF : 111 (111 vérifiés avec pdfinfo, 0 erreur)
+Tableurs : 4
+Pages de conférence : 25
+Actions « Consulter » : 115
+Actions « Télécharger » : 115
+Pages HTML avec accès Documents dans la navigation : 58/58
+Liens internes cassés : 0
+Références aux domaines de l'ancien site/Drive : 0
+GitHub Action d'import externe : supprimée
+
+Statut : OK - V5 autonome prête pour GitHub Pages
