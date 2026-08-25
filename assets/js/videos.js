@@ -1,435 +1,301 @@
-(() => {
+document.addEventListener("DOMContentLoaded", function () {
   "use strict";
 
-  const DATA_URL = "assets/data/videos.json";
-  const FALLBACK_THUMBNAIL = "assets/img/video-placeholder.svg";
+  console.log("RELIER Vidéos — version définitive chargée");
 
-  function start() {
-    const grid = document.querySelector("[data-video-grid]");
-    const emptyState = document.querySelector("[data-video-empty]");
-    const searchInput = document.querySelector("[data-video-search]");
-    const countValue = document.querySelector("[data-video-count]");
-    const countLabel = document.querySelector("[data-video-count-label]");
+  var DATA_URL = "assets/data/videos.json";
+  var FALLBACK_THUMBNAIL = "assets/img/video-placeholder.svg";
 
-    const dialog = document.querySelector("[data-video-dialog]");
-    const closeButton = document.querySelector("[data-video-close]");
-    const consent = document.querySelector("[data-video-consent]");
-    const titleElement = document.querySelector("[data-video-dialog-title]");
-    const acceptButton = document.querySelector("[data-video-accept]");
-    const externalLink = document.querySelector("[data-video-external]");
-    const player = document.querySelector("[data-video-player]");
+  var grid = document.querySelector("[data-video-grid]");
+  var emptyState = document.querySelector("[data-video-empty]");
+  var searchInput = document.querySelector("[data-video-search]");
+  var countValue = document.querySelector("[data-video-count]");
+  var countLabel = document.querySelector("[data-video-count-label]");
 
-    if (!grid) {
-      console.error("RELIER Vidéos : [data-video-grid] introuvable.");
-      return;
+  var dialog = document.querySelector("[data-video-dialog]");
+  var dialogClose = document.querySelector("[data-video-close]");
+  var consentBlock = document.querySelector("[data-video-consent]");
+  var dialogTitle = document.querySelector("[data-video-dialog-title]");
+  var acceptButton = document.querySelector("[data-video-accept]");
+  var externalLink = document.querySelector("[data-video-external]");
+  var player = document.querySelector("[data-video-player]");
+
+  var videos = [];
+  var currentVideo = null;
+
+  if (!grid) {
+    console.error("RELIER Vidéos : la grille vidéo est introuvable.");
+    return;
+  }
+
+  function escapeHtml(value) {
+    return String(value == null ? "" : value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  }
+
+  function youtubeWatchUrl(id) {
+    return "https://www.youtube.com/watch?v=" + encodeURIComponent(id);
+  }
+
+  function youtubeEmbedUrl(id) {
+    return "https://www.youtube-nocookie.com/embed/" +
+      encodeURIComponent(id) +
+      "?autoplay=1&rel=0&hl=fr&playsinline=1";
+  }
+
+  function updateCount(number) {
+    if (countValue) {
+      countValue.textContent = String(number);
     }
 
-    if (!dialog || !consent || !acceptButton || !player) {
-      console.error(
-        "RELIER Vidéos : la fenêtre vidéo est incomplète.",
-        {
-          dialog: !!dialog,
-          consent: !!consent,
-          acceptButton: !!acceptButton,
-          player: !!player
-        }
-      );
-      return;
+    if (countLabel) {
+      countLabel.textContent = number === 1 ? "vidéo" : "vidéos";
     }
+  }
 
-    let videos = [];
+  function videoCard(video) {
+    var id = escapeHtml(video.id);
+    var title = escapeHtml(video.title);
+    var thumbnail = escapeHtml(video.thumbnail || FALLBACK_THUMBNAIL);
 
+    return '' +
+      '<article class="video-card">' +
+        '<button class="video-card-media" type="button" data-video-id="' + id + '" aria-label="Lire : ' + title + '">' +
+          '<img src="' + thumbnail + '" alt="" loading="lazy" width="320" height="180">' +
+          '<span class="video-card-play" aria-hidden="true">▶</span>' +
+        '</button>' +
+        '<div class="video-card-body">' +
+          '<div class="video-card-meta"><span class="pill">Vidéo</span></div>' +
+          '<h3>' + title + '</h3>' +
+          '<div class="video-card-actions">' +
+            '<button class="btn btn-text" type="button" data-video-id="' + id + '">Voir la vidéo</button>' +
+            '<a class="video-youtube-link" href="' + youtubeWatchUrl(video.id) + '" target="_blank" rel="noopener noreferrer">YouTube ↗</a>' +
+          '</div>' +
+        '</div>' +
+      '</article>';
+  }
 
-    /* =======================================================
-       OUTILS
-       ======================================================= */
+  function render(list) {
+    updateCount(list.length);
 
-    function escapeHtml(value) {
-      return String(value ?? "")
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;")
-        .replaceAll("'", "&#039;");
-    }
-
-    function watchUrl(id) {
-      return "https://www.youtube.com/watch?v=" + encodeURIComponent(id);
-    }
-
-    function embedUrl(id) {
-      return (
-        "https://www.youtube-nocookie.com/embed/" +
-        encodeURIComponent(id) +
-        "?autoplay=1&rel=0&hl=fr&playsinline=1"
-      );
-    }
-
-    function setCount(number) {
-      if (countValue) {
-        countValue.textContent = String(number);
-      }
-
-      if (countLabel) {
-        countLabel.textContent = number > 1 ? "vidéos" : "vidéo";
-      }
-    }
-
-
-    /* =======================================================
-       CARTES
-       ======================================================= */
-
-    function cardHtml(video) {
-      const id = escapeHtml(video.id);
-      const title = escapeHtml(video.title);
-      const thumbnail = escapeHtml(
-        video.thumbnail || FALLBACK_THUMBNAIL
-      );
-
-      return `
-        <article class="video-card">
-
-          <button
-            class="video-card-media"
-            type="button"
-            data-video-id="${id}"
-            aria-label="Lire : ${title}">
-
-            <img
-              src="${thumbnail}"
-              alt=""
-              loading="lazy"
-              width="320"
-              height="180">
-
-            <span class="video-card-play" aria-hidden="true">▶</span>
-
-          </button>
-
-          <div class="video-card-body">
-
-            <div class="video-card-meta">
-              <span class="pill">Vidéo</span>
-            </div>
-
-            <h3>${title}</h3>
-
-            <div class="video-card-actions">
-
-              <button
-                class="btn btn-text"
-                type="button"
-                data-video-id="${id}">
-                Voir la vidéo
-              </button>
-
-              <a
-                class="video-youtube-link"
-                href="${watchUrl(video.id)}"
-                target="_blank"
-                rel="noopener noreferrer">
-                YouTube ↗
-              </a>
-
-            </div>
-
-          </div>
-
-        </article>
-      `;
-    }
-
-    function render(list) {
-      setCount(list.length);
-
-      if (!list.length) {
-        grid.innerHTML = "";
-
-        if (emptyState) {
-          emptyState.hidden = false;
-        }
-
-        return;
-      }
+    if (!list.length) {
+      grid.innerHTML = "";
 
       if (emptyState) {
-        emptyState.hidden = true;
+        emptyState.hidden = false;
       }
 
-      grid.innerHTML = list.map(cardHtml).join("");
+      return;
     }
 
-
-    /* =======================================================
-       LECTEUR
-       ======================================================= */
-
-    function clearPlayer() {
-      player.innerHTML = "";
-      player.hidden = true;
-      player.style.display = "none";
+    if (emptyState) {
+      emptyState.hidden = true;
     }
 
-    function showConsent() {
-      consent.hidden = false;
-      consent.style.display = "";
+    grid.innerHTML = list.map(videoCard).join("");
+  }
+
+  function filterVideos() {
+    var query = searchInput ? searchInput.value.trim().toLowerCase() : "";
+
+    if (!query) {
+      render(videos);
+      return;
     }
 
-    function hideConsent() {
-      consent.hidden = true;
-      consent.style.display = "none";
+    render(videos.filter(function (video) {
+      return String(video.title || "").toLowerCase().indexOf(query) !== -1;
+    }));
+  }
+
+  function clearPlayer() {
+    if (!player) {
+      return;
     }
 
-    function closeDialog() {
-      clearPlayer();
-      showConsent();
+    player.innerHTML = "";
+    player.hidden = true;
+    player.style.display = "none";
+  }
 
-      if (dialog.open && typeof dialog.close === "function") {
-        dialog.close();
-      } else {
-        dialog.removeAttribute("open");
+  function showConsent() {
+    if (!consentBlock) {
+      return;
+    }
+
+    consentBlock.hidden = false;
+    consentBlock.style.display = "";
+  }
+
+  function hideConsent() {
+    if (!consentBlock) {
+      return;
+    }
+
+    consentBlock.hidden = true;
+    consentBlock.style.display = "none";
+  }
+
+  function openVideo(video) {
+    currentVideo = video;
+
+    if (!dialog || !acceptButton || !player || !consentBlock) {
+      window.open(youtubeWatchUrl(video.id), "_blank", "noopener,noreferrer");
+      return;
+    }
+
+    clearPlayer();
+    showConsent();
+
+    if (dialogTitle) {
+      dialogTitle.textContent = video.title;
+    }
+
+    if (externalLink) {
+      externalLink.href = youtubeWatchUrl(video.id);
+    }
+
+    if (typeof dialog.showModal === "function") {
+      if (!dialog.open) {
+        dialog.showModal();
       }
+    } else {
+      dialog.setAttribute("open", "");
+    }
+  }
+
+  function playCurrentVideo() {
+    if (!currentVideo || !player) {
+      console.error("RELIER Vidéos : aucune vidéo sélectionnée.");
+      return;
     }
 
-    function playVideo(video) {
-      console.log(
-        "RELIER Vidéos : lecture demandée",
-        video.id,
-        video.title
-      );
+    console.log("RELIER Vidéos : lecture de", currentVideo.id);
 
-      const iframe = document.createElement("iframe");
+    var iframe = document.createElement("iframe");
+    iframe.src = youtubeEmbedUrl(currentVideo.id);
+    iframe.title = currentVideo.title || "Vidéo RELIER";
+    iframe.allowFullscreen = true;
+    iframe.referrerPolicy = "strict-origin-when-cross-origin";
+    iframe.setAttribute(
+      "allow",
+      "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    );
 
-      iframe.src = embedUrl(video.id);
-      iframe.title = video.title || "Vidéo RELIER";
-      iframe.loading = "eager";
-      iframe.allowFullscreen = true;
-      iframe.referrerPolicy = "strict-origin-when-cross-origin";
+    hideConsent();
 
-      iframe.setAttribute(
-        "allow",
-        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      );
+    player.innerHTML = "";
+    player.appendChild(iframe);
+    player.hidden = false;
+    player.style.display = "block";
+  }
 
-      hideConsent();
+  function closeVideoDialog() {
+    clearPlayer();
+    showConsent();
+    currentVideo = null;
 
-      player.innerHTML = "";
-      player.appendChild(iframe);
-
-      player.hidden = false;
-      player.style.display = "block";
+    if (!dialog) {
+      return;
     }
 
-    function openVideo(video) {
-      clearPlayer();
-      showConsent();
+    if (typeof dialog.close === "function" && dialog.open) {
+      dialog.close();
+    } else {
+      dialog.removeAttribute("open");
+    }
+  }
 
-      if (titleElement) {
-        titleElement.textContent = video.title;
-      }
+  grid.addEventListener("click", function (event) {
+    var trigger = event.target.closest("[data-video-id]");
 
-      if (externalLink) {
-        externalLink.href = watchUrl(video.id);
-      }
-
-      /*
-       * Le gestionnaire est affecté ICI, au moment où la vidéo
-       * est sélectionnée. Il ne dépend donc pas d'un état précédent
-       * ni d'un listener posé trop tôt.
-       */
-      acceptButton.onclick = function (event) {
-        event.preventDefault();
-        event.stopPropagation();
-        playVideo(video);
-      };
-
-      if (typeof dialog.showModal === "function") {
-        if (!dialog.open) {
-          dialog.showModal();
-        }
-      } else {
-        dialog.setAttribute("open", "");
-      }
+    if (!trigger) {
+      return;
     }
 
+    event.preventDefault();
 
-    /* =======================================================
-       ÉVÉNEMENTS
-       ======================================================= */
-
-    grid.addEventListener("click", function (event) {
-      const trigger = event.target.closest("[data-video-id]");
-
-      if (!trigger) {
-        return;
-      }
-
-      event.preventDefault();
-
-      const id = trigger.getAttribute("data-video-id");
-
-      const video = videos.find(function (item) {
-        return String(item.id) === String(id);
-      });
-
-      if (video) {
-        openVideo(video);
-      }
+    var id = trigger.getAttribute("data-video-id");
+    var video = videos.find(function (item) {
+      return String(item.id) === String(id);
     });
 
-    if (searchInput) {
-      searchInput.addEventListener("input", function () {
-        const query = searchInput.value
-          .trim()
-          .toLocaleLowerCase("fr");
-
-        if (!query) {
-          render(videos);
-          return;
-        }
-
-        render(
-          videos.filter(function (video) {
-            return String(video.title || "")
-              .toLocaleLowerCase("fr")
-              .includes(query);
-          })
-        );
-      });
+    if (video) {
+      openVideo(video);
     }
+  });
 
-    if (closeButton) {
-      closeButton.addEventListener("click", function (event) {
-        event.preventDefault();
-        closeDialog();
-      });
-    }
+  if (searchInput) {
+    searchInput.addEventListener("input", filterVideos);
+  }
 
+  if (acceptButton) {
+    acceptButton.addEventListener("click", function (event) {
+      event.preventDefault();
+      playCurrentVideo();
+    });
+  }
+
+  if (dialogClose) {
+    dialogClose.addEventListener("click", function (event) {
+      event.preventDefault();
+      closeVideoDialog();
+    });
+  }
+
+  if (dialog) {
     dialog.addEventListener("cancel", function (event) {
       event.preventDefault();
-      closeDialog();
+      closeVideoDialog();
     });
 
     dialog.addEventListener("close", function () {
       clearPlayer();
       showConsent();
-      acceptButton.onclick = null;
+      currentVideo = null;
     });
 
     dialog.addEventListener("click", function (event) {
       if (event.target === dialog) {
-        closeDialog();
+        closeVideoDialog();
       }
     });
+  }
 
-
-    /* =======================================================
-       DONNÉES
-       ======================================================= */
-
-    async function loadVideos() {
-      try {
-        const response = await fetch(DATA_URL, {
-          cache: "no-store"
-        });
-
-        if (!response.ok) {
-          throw new Error("HTTP " + response.status);
-        }
-
-        const data = await response.json();
-
-        videos = Array.isArray(data.videos)
-          ? data.videos.filter(function (video) {
-              return video && video.id && video.title;
-            })
-          : [];
-
-        if (!videos.length) {
-          setCount(0);
-
-          grid.innerHTML = `
-            <div class="video-sync-empty">
-
-              <span class="eyebrow">Vidéothèque</span>
-
-              <h2>Aucune vidéo n’est actuellement disponible.</h2>
-
-              <p>
-                Vous pouvez consulter directement
-                la chaîne RELIER sur YouTube.
-              </p>
-
-              <a
-                class="btn btn-secondary"
-                href="https://www.youtube.com/@reseaurelier"
-                target="_blank"
-                rel="noopener noreferrer">
-                Voir la chaîne YouTube →
-              </a>
-
-            </div>
-          `;
-
-          return;
-        }
-
-        render(videos);
-
-      } catch (error) {
-        console.error(
-          "RELIER Vidéos : impossible de charger le catalogue.",
-          error
-        );
-
-        setCount(0);
-
-        grid.innerHTML = `
-          <div class="video-sync-empty">
-
-            <span class="eyebrow">Vidéothèque</span>
-
-            <h2>Impossible de charger le catalogue vidéo.</h2>
-
-            <p>
-              Vous pouvez néanmoins consulter directement
-              la chaîne RELIER sur YouTube.
-            </p>
-
-            <a
-              class="btn btn-secondary"
-              href="https://www.youtube.com/@reseaurelier"
-              target="_blank"
-              rel="noopener noreferrer">
-              Voir la chaîne YouTube →
-            </a>
-
-          </div>
-        `;
+  fetch(DATA_URL, { cache: "no-store" })
+    .then(function (response) {
+      if (!response.ok) {
+        throw new Error("HTTP " + response.status);
       }
-    }
 
+      return response.json();
+    })
+    .then(function (data) {
+      videos = Array.isArray(data.videos)
+        ? data.videos.filter(function (video) {
+            return video && video.id && video.title;
+          })
+        : [];
 
-    /* =======================================================
-       INITIALISATION
-       ======================================================= */
+      console.log("RELIER Vidéos :", videos.length, "vidéo(s) chargée(s)");
 
-    clearPlayer();
-    showConsent();
-    loadVideos();
+      render(videos);
+    })
+    .catch(function (error) {
+      console.error("RELIER Vidéos : impossible de charger videos.json", error);
 
-    console.log("RELIER Vidéos : script initialisé.");
-  }
+      updateCount(0);
 
-
-  /*
-   * Le script fonctionne même s'il est déplacé un jour dans le <head>.
-   */
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", start, { once: true });
-  } else {
-    start();
-  }
-
-})();
+      grid.innerHTML =
+        '<div class="video-sync-empty">' +
+          '<span class="eyebrow">Vidéothèque</span>' +
+          '<h2>Impossible de charger le catalogue vidéo.</h2>' +
+          '<p>Vous pouvez consulter directement la chaîne RELIER sur YouTube.</p>' +
+          '<a class="btn btn-secondary" href="https://www.youtube.com/@reseaurelier" target="_blank" rel="noopener noreferrer">Voir la chaîne YouTube →</a>' +
+        '</div>';
+    });
+});
