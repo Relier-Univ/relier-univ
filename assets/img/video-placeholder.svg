@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#eef8fc"/>
+  <circle cx="640" cy="360" r="100" fill="#162852"/>
+  <polygon points="615,305 615,415 710,360" fill="#ffffff"/>
+  <text x="640" y="525" text-anchor="middle"
+        font-family="Arial, sans-serif" font-size="42"
+        font-weight="700" fill="#162852">RELIER</text>
+</svg>

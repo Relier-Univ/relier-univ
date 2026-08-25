@@ -183,3 +183,582 @@ button{cursor:pointer}
 /* V4.2 — correctif archive conférences */
 .archive-list .archive-row.hidden-card{display:none}
 .archive-list + *{margin-top:20px}
+/* =========================================================
+   RELIER — CORRECTION DES BULLES DE LA PAGE FORMATIONS
+   ========================================================= */
+
+/* Bulles du haut :
+   "Cycle de formation"
+   "Formation-action"
+   "Formation"
+*/
+.program-card .pill{
+  width:110px;
+  height:110px;
+  min-width:110px;
+  min-height:110px;
+
+  padding:14px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
+
+  background:var(--ice);
+  color:var(--navy);
+
+  font-size:.72rem;
+  font-weight:800;
+  line-height:1.35;
+
+  text-align:center;
+
+  box-sizing:border-box;
+  flex-shrink:0;
+}
+
+
+/* Bulles du bas :
+   "Voir la fiche complète →"
+*/
+.program-card .btn-secondary{
+  width:110px;
+  height:110px;
+  min-width:110px;
+  min-height:110px;
+
+  padding:14px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
+
+  background:white;
+  border:1px solid #bfd6e1;
+  color:var(--navy);
+
+  font-size:.92rem;
+  font-weight:780;
+  line-height:1.35;
+
+  text-align:center;
+
+  box-sizing:border-box;
+  flex-shrink:0;
+}
+
+
+/* Survol du bouton */
+.program-card .btn-secondary:hover{
+  border-color:var(--blue);
+  background:var(--ice);
+}
+
+
+/* Adaptation mobile */
+@media(max-width:620px){
+
+  .program-card .pill{
+    width:100px;
+    height:100px;
+    min-width:100px;
+    min-height:100px;
+  }
+
+  .program-card .btn-secondary{
+    width:100px;
+    height:100px;
+    min-width:100px;
+    min-height:100px;
+    font-size:.88rem;
+  }
+
+}
+/* =========================================================
+   FORMATIONS — CENTRAGE DES BLOCS DURÉE / LIEU
+   ========================================================= */
+
+.program-card > p{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  text-align:center;
+
+  margin:0;
+  padding:12px 10px;
+
+  width:100%;
+  height:100%;
+
+  color:var(--muted);
+  line-height:1.55;
+}
+/* =========================================================
+   RELIER — FORMULAIRE GOOGLE CONTACT
+   ========================================================= */
+
+.google-form-wrap{
+  width:100%;
+  min-width:0;
+}
+
+.google-form-wrap iframe{
+  display:block;
+  width:100%;
+  min-height:1200px;
+  border:0;
+  border-radius:22px;
+  background:#f6fbfd;
+}
+
+.google-form-fallback{
+  margin:16px 0 0;
+  text-align:center;
+  color:var(--muted);
+  font-size:.86rem;
+}
+
+.google-form-fallback a{
+  color:var(--navy);
+  font-weight:800;
+}
+
+.google-form-fallback a:hover{
+  color:var(--blue);
+}
+
+@media(max-width:860px){
+  .google-form-wrap iframe{
+    min-height:1400px;
+  }
+}
+//* =========================================================
+   RELIER — PAGE VIDÉOS V2
+   Vignettes locales + lecteur YouTube après consentement
+   À coller à la FIN de assets/css/styles.css
+   ========================================================= */
+
+.sr-only{
+  position:absolute!important;
+  width:1px!important;
+  height:1px!important;
+  padding:0!important;
+  margin:-1px!important;
+  overflow:hidden!important;
+  clip:rect(0,0,0,0)!important;
+  white-space:nowrap!important;
+  border:0!important;
+}
+
+
+/* --- En-tête de la vidéothèque --- */
+
+.video-page-intro{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:40px;
+  margin-bottom:30px;
+}
+
+.video-page-intro > div{
+  max-width:800px;
+}
+
+.video-page-intro h2{
+  margin:10px 0 10px;
+  color:var(--navy);
+  font-size:clamp(2rem,4vw,3.2rem);
+  line-height:1.08;
+  letter-spacing:-.04em;
+}
+
+.video-page-intro p{
+  margin:0;
+  color:var(--muted);
+  font-size:1.04rem;
+}
+
+.video-page-intro > .btn{
+  flex:0 0 auto;
+  white-space:nowrap;
+}
+
+
+/* --- Barre recherche / compteur --- */
+
+.video-toolbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  margin:0 0 30px;
+  padding:16px 18px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:var(--ice-2);
+}
+
+.video-count{
+  display:flex;
+  align-items:baseline;
+  gap:8px;
+  color:var(--muted);
+}
+
+.video-count strong{
+  color:var(--navy);
+  font-size:1.35rem;
+}
+
+.video-search{
+  width:min(100%,380px);
+}
+
+.video-search input{
+  width:100%;
+  min-height:46px;
+  padding:0 16px;
+  border:1px solid #ccdbe3;
+  border-radius:999px;
+  background:white;
+  color:var(--ink);
+  outline:none;
+}
+
+.video-search input:focus{
+  border-color:var(--blue);
+  box-shadow:0 0 0 4px rgba(28,158,217,.10);
+}
+
+
+/* --- Grille des vidéos --- */
+
+.video-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:22px;
+}
+
+.video-card{
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:20px;
+  background:white;
+  transition:.22s ease;
+}
+
+.video-card:hover{
+  transform:translateY(-3px);
+  border-color:#b8dce9;
+  box-shadow:var(--shadow-soft);
+}
+
+.video-card-media{
+  position:relative;
+  display:block;
+  width:100%;
+  aspect-ratio:16 / 9;
+  padding:0;
+  overflow:hidden;
+  border:0;
+  border-radius:0;
+  background:#dfeff5;
+  cursor:pointer;
+}
+
+.video-card-media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .3s ease;
+}
+
+.video-card:hover .video-card-media img{
+  transform:scale(1.025);
+}
+
+.video-card-media:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    180deg,
+    transparent 45%,
+    rgba(9,23,49,.18) 100%
+  );
+}
+
+.video-card-play{
+  position:absolute;
+  left:50%;
+  top:50%;
+  z-index:2;
+  width:64px;
+  height:64px;
+  display:grid;
+  place-items:center;
+  padding-left:4px;
+  border-radius:50%;
+  transform:translate(-50%,-50%);
+  background:rgba(22,40,82,.94);
+  color:white;
+  font-size:1.35rem;
+  box-shadow:0 12px 30px rgba(14,29,61,.24);
+  transition:.2s ease;
+}
+
+.video-card-media:hover .video-card-play,
+.video-card-media:focus-visible .video-card-play{
+  transform:translate(-50%,-50%) scale(1.08);
+  background:var(--blue);
+}
+
+.video-card-body{
+  display:flex;
+  flex-direction:column;
+  flex:1;
+  padding:22px;
+}
+
+.video-card-meta{
+  margin-bottom:12px;
+}
+
+.video-card h3{
+  margin:0;
+  color:var(--navy);
+  font-size:1.12rem;
+  line-height:1.34;
+  letter-spacing:-.015em;
+}
+
+.video-card-actions{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  margin-top:auto;
+  padding-top:20px;
+}
+
+.video-card-actions .btn-text{
+  background:transparent;
+  border:0;
+  cursor:pointer;
+}
+
+.video-youtube-link{
+  color:var(--muted);
+  font-size:.78rem;
+  font-weight:800;
+}
+
+.video-youtube-link:hover{
+  color:var(--blue);
+}
+
+
+/* --- États --- */
+
+.video-loading,
+.video-sync-empty{
+  grid-column:1/-1;
+  padding:42px;
+  border:1px solid var(--line);
+  border-radius:22px;
+  background:linear-gradient(135deg,#fff,#f4fbfe);
+  color:var(--muted);
+  text-align:center;
+}
+
+.video-sync-empty h2{
+  max-width:760px;
+  margin:12px auto 10px;
+  color:var(--navy);
+  line-height:1.15;
+}
+
+.video-sync-empty p{
+  max-width:720px;
+  margin:0 auto 22px;
+}
+
+.video-empty{
+  padding:40px;
+  text-align:center;
+  color:var(--muted);
+}
+
+.video-empty h3{
+  margin:0 0 5px;
+  color:var(--navy);
+}
+
+.video-sync-note{
+  margin-top:34px;
+}
+
+
+/* --- Fenêtre vidéo --- */
+
+.video-dialog{
+  width:min(calc(100% - 32px),960px);
+  max-height:calc(100vh - 40px);
+  padding:0;
+  overflow:auto;
+  border:0;
+  border-radius:26px;
+  background:white;
+  box-shadow:0 30px 100px rgba(8,20,43,.34);
+}
+
+.video-dialog::backdrop{
+  background:rgba(5,15,35,.70);
+  backdrop-filter:blur(4px);
+}
+
+.video-dialog-inner{
+  position:relative;
+}
+
+.video-dialog-close{
+  position:absolute;
+  right:14px;
+  top:14px;
+  z-index:10;
+  width:42px;
+  height:42px;
+  display:grid;
+  place-items:center;
+  padding:0;
+  border:1px solid rgba(255,255,255,.35);
+  border-radius:50%;
+  background:rgba(10,23,50,.80);
+  color:white;
+  font-size:1.6rem;
+  line-height:1;
+}
+
+.video-dialog-consent{
+  min-height:470px;
+  padding:64px;
+  background:
+    radial-gradient(circle at 85% 15%,rgba(68,183,229,.20),transparent 24%),
+    linear-gradient(135deg,#fff,#f2fafe);
+}
+
+.video-dialog-consent h2{
+  max-width:700px;
+  margin:18px 0 15px;
+  color:var(--navy);
+  font-size:clamp(1.9rem,4vw,3rem);
+  line-height:1.08;
+  letter-spacing:-.04em;
+}
+
+.video-dialog-consent > p{
+  max-width:720px;
+  color:var(--muted);
+}
+
+.video-consent-note{
+  margin:24px 0 0;
+  padding:16px 18px;
+  border-left:4px solid var(--blue);
+  border-radius:0 12px 12px 0;
+  background:white;
+}
+
+.video-dialog-privacy{
+  margin-top:22px;
+  font-size:.82rem;
+}
+
+.video-dialog-privacy a{
+  color:var(--navy);
+  font-weight:800;
+}
+
+.video-player{
+  position:relative;
+  width:100%;
+  aspect-ratio:16 / 9;
+  background:#071126;
+}
+
+.video-player iframe{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:0;
+}
+
+
+/* --- Responsive --- */
+
+@media(max-width:980px){
+
+  .video-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
+}
+
+@media(max-width:760px){
+
+  .video-page-intro{
+    align-items:flex-start;
+    flex-direction:column;
+    gap:22px;
+  }
+
+  .video-toolbar{
+    align-items:stretch;
+    flex-direction:column;
+  }
+
+  .video-search{
+    width:100%;
+  }
+
+  .video-dialog-consent{
+    min-height:0;
+    padding:56px 28px 36px;
+  }
+
+}
+
+@media(max-width:620px){
+
+  .video-grid{
+    grid-template-columns:1fr;
+  }
+
+  .video-card-body{
+    padding:20px;
+  }
+
+  .video-card-play{
+    width:58px;
+    height:58px;
+  }
+
+  .video-dialog-consent .btns{
+    display:grid;
+  }
+
+  .video-dialog-consent .btn{
+    width:100%;
+  }
+
+}
