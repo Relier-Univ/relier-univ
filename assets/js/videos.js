@@ -295,7 +295,7 @@ document.addEventListener("DOMContentLoaded", function () {
           '<span class="eyebrow">Vidéothèque</span>' +
           '<h2>Impossible de charger le catalogue vidéo.</h2>' +
           '<p>Vous pouvez consulter directement la chaîne RELIER sur YouTube.</p>' +
-          '<a class="btn btn-secondary" href="https://www.youtube.com/@reseaurelier" target="_blank" rel="noopener noreferrer">Voir la chaîne YouTube →</a>' +
+          '<a class="btn btn-secondary" href="https://www.youtube.com/@reseaurelier1033" target="_blank" rel="noopener noreferrer">Voir la chaîne YouTube →</a>' +
         '</div>';
     });
 });
