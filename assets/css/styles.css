@@ -1466,3 +1466,265 @@ button{cursor:pointer}
     min-height:52px;
   }
 }
+/* =========================================================
+   RELIER — HEADER ÉLÉGANT / MENU HARMONISÉ
+   ========================================================= */
+
+/* Bandeau général */
+.site-header{
+  background:rgba(255,255,255,.97);
+  border-bottom:1px solid var(--line);
+}
+
+.header-inner{
+  min-height:96px;
+  height:auto;
+
+  display:flex;
+  align-items:center;
+
+  gap:28px;
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.logo-link{
+  display:flex;
+  align-items:center;
+
+  flex:0 0 auto;
+}
+
+.logo-link img{
+  width:145px;
+  height:auto;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.main-nav{
+  display:flex;
+  align-items:center;
+
+  gap:6px;
+
+  margin-left:auto;
+
+  flex-wrap:nowrap;
+}
+
+
+/* Tous les onglets */
+.main-nav a{
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  min-height:58px;
+
+  padding:0 14px;
+
+  border-radius:14px;
+
+  color:#334055;
+
+  font-size:.92rem;
+  font-weight:700;
+
+  line-height:1.18;
+
+  text-align:center;
+
+  white-space:normal;
+
+  transition:
+    background .2s ease,
+    color .2s ease,
+    transform .2s ease;
+}
+
+
+/* Survol et page active */
+.main-nav a:hover,
+.main-nav a.active{
+  color:var(--navy);
+  background:var(--ice);
+}
+
+
+/* Petit effet discret au survol */
+.main-nav a:hover{
+  transform:translateY(-1px);
+}
+
+
+/* =========================================================
+   LARGEURS HARMONISÉES PAR ITEM
+   ========================================================= */
+
+/* Accueil */
+.main-nav a[href="index.html"]{
+  min-width:94px;
+}
+
+/* RELIER */
+.main-nav a[href="relier.html"]{
+  min-width:90px;
+}
+
+/* Nos thématiques */
+.main-nav a[href="thematiques.html"]{
+  min-width:128px;
+}
+
+/* Ressources */
+.main-nav a[href="ressources.html"]{
+  min-width:112px;
+}
+
+/* Documents */
+.main-nav a[href="documents/index.html"]{
+  min-width:110px;
+}
+
+/* Vidéos */
+.main-nav a[href="videos.html"]{
+  min-width:88px;
+}
+
+/* Rendez-vous */
+.main-nav a[href="rendez-vous.html"]{
+  min-width:112px;
+}
+
+/* Formations */
+.main-nav a[href="formations.html"]{
+  min-width:112px;
+}
+
+/* Le réseau */
+.main-nav a[href="reseau.html"]{
+  min-width:96px;
+}
+
+
+/* =========================================================
+   BOUTON REJOINDRE RELIER
+   ========================================================= */
+
+.main-nav .header-cta{
+  min-width:154px;
+  min-height:58px;
+
+  margin-left:8px;
+
+  padding:0 20px;
+
+  border-radius:16px;
+
+  background:var(--navy);
+
+  color:white!important;
+
+  font-weight:800!important;
+
+  line-height:1.2;
+}
+
+.main-nav .header-cta:hover{
+  background:#21396f!important;
+
+  color:white!important;
+}
+
+
+/* =========================================================
+   ÉCRANS INTERMÉDIAIRES
+   On resserre progressivement avant le menu mobile
+   ========================================================= */
+
+@media(max-width:1250px){
+
+  .header-inner{
+    gap:18px;
+  }
+
+  .logo-link img{
+    width:132px;
+  }
+
+  .main-nav{
+    gap:3px;
+  }
+
+  .main-nav a{
+    min-width:0!important;
+
+    min-height:54px;
+
+    padding:0 10px;
+
+    font-size:.85rem;
+  }
+
+  .main-nav .header-cta{
+    min-width:128px!important;
+
+    min-height:54px;
+
+    padding:0 14px;
+
+    margin-left:4px;
+  }
+
+}
+
+
+/* =========================================================
+   MENU MOBILE
+   ========================================================= */
+
+@media(max-width:860px){
+
+  .header-inner{
+    min-height:82px;
+  }
+
+  .logo-link img{
+    width:130px;
+  }
+
+  .main-nav{
+    align-items:stretch;
+    gap:3px;
+  }
+
+  .main-nav a{
+    width:100%;
+    min-width:0!important;
+    min-height:48px;
+
+    justify-content:flex-start;
+
+    padding:0 16px;
+
+    text-align:left;
+  }
+
+  .main-nav .header-cta{
+    width:100%;
+    min-width:0!important;
+
+    margin:4px 0 0;
+
+    justify-content:center;
+  }
+
+}
