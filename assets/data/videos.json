@@ -1,8 +1,154 @@
 {
   "channel_id": "UChQSi1vaDXyvDCcWOqp9nrg",
   "channel_url": "https://www.youtube.com/@reseaurelier",
-  "updated_at": null,
-  "source": null,
-  "count": 0,
-  "videos": []
+  "updated_at": "2026-08-25T12:21:46+00:00",
+  "source": "yt-dlp",
+  "count": 29,
+  "videos": [
+    {
+      "id": "oom3OKplU8U",
+      "title": "Mensuelle RELIER Décembre 2024   Accréditation CTI",
+      "thumbnail": "assets/img/videos/oom3OKplU8U.jpg"
+    },
+    {
+      "id": "6oB7b0-iKvU",
+      "title": "Mensuelle RELIER février 2025   Etude EY sur le pilotage des universités",
+      "thumbnail": "assets/img/videos/6oB7b0-iKvU.jpg"
+    },
+    {
+      "id": "VI8lNIP_xns",
+      "title": "Mensuelle. La force/la place des réseaux dans les 3 fonctions publiques",
+      "thumbnail": "assets/img/videos/VI8lNIP_xns.jpg"
+    },
+    {
+      "id": "JBAYCV4yOvk",
+      "title": "Mensuelle Relier. Parcours Usagers",
+      "thumbnail": "assets/img/videos/JBAYCV4yOvk.jpg"
+    },
+    {
+      "id": "PMSQnAKTy64",
+      "title": "Mensuelle Relier : Démarche qualité et CICFB. Similitudes et Différences",
+      "thumbnail": "assets/img/videos/PMSQnAKTy64.jpg"
+    },
+    {
+      "id": "b0Q-HzERY48",
+      "title": "RetEx innovation publique",
+      "thumbnail": "assets/img/videos/b0Q-HzERY48.jpg"
+    },
+    {
+      "id": "TTGvIFp_pNI",
+      "title": "19e Conférence du réseau Relier. \"Responsabilité Sociétale et Environnementale, ... \"",
+      "thumbnail": "assets/img/videos/TTGvIFp_pNI.jpg"
+    },
+    {
+      "id": "0EcRY-uNJ5w",
+      "title": "Retex. Certification et référentiels qualités",
+      "thumbnail": "assets/img/videos/0EcRY-uNJ5w.jpg"
+    },
+    {
+      "id": "cASbauDDx4s",
+      "title": "Retex.  « Comment intégrer le Développement Durable et la Responsabilité Sociétale  ? »",
+      "thumbnail": "assets/img/videos/cASbauDDx4s.jpg"
+    },
+    {
+      "id": "yrsMR-byhcU",
+      "title": "Relier Retex. Les enjeux de la dématérialisation dans nos établissements. 8/12/2022",
+      "thumbnail": "assets/img/videos/yrsMR-byhcU.jpg"
+    },
+    {
+      "id": "fxtwk6iw8SI",
+      "title": "Relier Retex Données indicateurs et pilotage 01-03-2022",
+      "thumbnail": "assets/img/videos/fxtwk6iw8SI.jpg"
+    },
+    {
+      "id": "5pVWpXLsh_c",
+      "title": "Conf Relier int - Stratégie 21-25 AUF",
+      "thumbnail": "assets/img/videos/5pVWpXLsh_c.jpg"
+    },
+    {
+      "id": "ErUC3T5hwPc",
+      "title": "Conf Relier int - Retex Vietman (ASEAN)",
+      "thumbnail": "assets/img/videos/ErUC3T5hwPc.jpg"
+    },
+    {
+      "id": "Ezscw8rJUGM",
+      "title": "Conf Relier int - Retex Univ Rennes I",
+      "thumbnail": "assets/img/videos/Ezscw8rJUGM.jpg"
+    },
+    {
+      "id": "6Vf-foIIjew",
+      "title": "Conf Relier-052021-HCERES et International",
+      "thumbnail": "assets/img/videos/6Vf-foIIjew.jpg"
+    },
+    {
+      "id": "PBJeTfzSyBg",
+      "title": "Conf Relier-052021-Les ESG",
+      "thumbnail": "assets/img/videos/PBJeTfzSyBg.jpg"
+    },
+    {
+      "id": "UJR6rBbCVvA",
+      "title": "Conf Relier-052021-Retex-Allemagne",
+      "thumbnail": "assets/img/videos/UJR6rBbCVvA.jpg"
+    },
+    {
+      "id": "MHrq4AdYs8g",
+      "title": "Conf Relier-052021-Retex-Pjt-Internationaux",
+      "thumbnail": "assets/img/videos/MHrq4AdYs8g.jpg"
+    },
+    {
+      "id": "UPAJ9djXpSY",
+      "title": "Retex Relier gestion des risques 0421",
+      "thumbnail": "assets/img/videos/UPAJ9djXpSY.jpg"
+    },
+    {
+      "id": "MiQfK8XbCfE",
+      "title": "Retex Relier demarche qualité 110521",
+      "thumbnail": "assets/img/videos/MiQfK8XbCfE.jpg"
+    },
+    {
+      "id": "ItYHgqePrJo",
+      "title": "Retex-Relier-Pjt-Etab_120221",
+      "thumbnail": "assets/img/videos/ItYHgqePrJo.jpg"
+    },
+    {
+      "id": "hHvEq67pl0M",
+      "title": "RETEX Autoévaluation - Etablissement",
+      "thumbnail": "assets/img/videos/hHvEq67pl0M.jpg"
+    },
+    {
+      "id": "HYnvAyZ4HUk",
+      "title": "Retex Autoévaluation- Recherche",
+      "thumbnail": "assets/img/videos/HYnvAyZ4HUk.jpg"
+    },
+    {
+      "id": "DYKufCf3X8A",
+      "title": "Retex Autoévaluation- Formation",
+      "thumbnail": "assets/img/videos/DYKufCf3X8A.jpg"
+    },
+    {
+      "id": "gc-4nlL72Uc",
+      "title": "Paysage des certifications des organismes de formation continue",
+      "thumbnail": "assets/img/videos/gc-4nlL72Uc.jpg"
+    },
+    {
+      "id": "qO999MDaU2M",
+      "title": "Panorama des pratiques actuelles d'enquête, une réflexion globale en FTLV",
+      "thumbnail": "assets/img/videos/qO999MDaU2M.jpg"
+    },
+    {
+      "id": "fdW4K7U3a_c",
+      "title": "Le projet NCU FlexiTLV : formation orientée compétences",
+      "thumbnail": "assets/img/videos/fdW4K7U3a_c.jpg"
+    },
+    {
+      "id": "lvy426M82rc",
+      "title": "Écosystème national et international en mouvement et stratégie d’établissement  (suite)",
+      "thumbnail": "assets/img/videos/lvy426M82rc.jpg"
+    },
+    {
+      "id": "hQzFKIb1pKA",
+      "title": "Écosystème national et international en mouvement et stratégie d’établissement",
+      "thumbnail": "assets/img/videos/hQzFKIb1pKA.jpg"
+    }
+  ]
 }
