@@ -1057,3 +1057,7 @@ select:focus-visible{
   }
 
 }
+.video-dialog-consent[hidden],
+.video-player[hidden]{
+  display:none !important;
+}
