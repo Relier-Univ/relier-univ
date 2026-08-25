@@ -26,7 +26,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 CHANNEL_ID = "UChQSi1vaDXyvDCcWOqp9nrg"
 CHANNEL_URL = f"https://www.youtube.com/channel/{CHANNEL_ID}/videos"
-CHANNEL_PUBLIC_URL = "https://www.youtube.com/@reseaurelier"
+CHANNEL_PUBLIC_URL = "https://www.youtube.com/@reseaurelier1033"
 
 DATA_DIR = ROOT / "assets" / "data"
 THUMB_DIR = ROOT / "assets" / "img" / "videos"
